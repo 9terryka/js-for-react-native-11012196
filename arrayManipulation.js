@@ -12,6 +12,23 @@ function processArray(array) {
     return result;
 }
 
-var inputArray = [1, 2, 3, 4, 5];
-var outputArray = processArray(inputArray);
-console.log(outputArray);
+function formatArrayStrings(strings, numbers) {
+    var formattedStrings = [];
+    
+
+    for (var i = 0; i < strings.length; i++) { 
+        if (numbers[i] % 2 === 0) {
+            formattedStrings.push(strings[i].toUpperCase());
+        } else {
+            formattedStrings.push(strings[i].toLowerCase());
+        }
+    }
+    
+    return formattedStrings;
+}
+
+var inputStrings = ["Hi", "Terry", "Python", "Coding"];
+var inputNumbers = [1, 2, 3, 4];
+var processedNumbers = processArray(inputNumbers);
+var formattedStrings = formatArrayStrings(inputStrings, processedNumbers);
+console.log(formattedStrings);
